@@ -1,0 +1,209 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500;600&family=Space+Grotesk:wght@400;500;600;700&display=swap');
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --background: hsl(220, 35%, 8%);
+  --foreground: hsl(210, 40%, 98%);
+  --card: hsl(220, 25%, 12%);
+  --card-foreground: hsl(210, 40%, 98%);
+  --popover: hsl(220, 25%, 12%);
+  --popover-foreground: hsl(210, 40%, 98%);
+  --primary: hsl(195, 100%, 50%);
+  --primary-foreground: hsl(220, 35%, 8%);
+  --secondary: hsl(262, 65%, 65%);
+  --secondary-foreground: hsl(210, 40%, 98%);
+  --muted: hsl(220, 15%, 25%);
+  --muted-foreground: hsl(220, 10%, 70%);
+  --accent: hsl(51, 100%, 50%);
+  --accent-foreground: hsl(220, 35%, 8%);
+  --destructive: hsl(356, 90%, 54%);
+  --destructive-foreground: hsl(0, 0%, 100%);
+  --border: hsl(220, 25%, 20%);
+  --input: hsl(220, 25%, 20%);
+  --ring: hsl(195, 100%, 50%);
+  --chart-1: hsl(195, 100%, 50%);
+  --chart-2: hsl(159, 100%, 36%);
+  --chart-3: hsl(42, 93%, 56%);
+  --chart-4: hsl(147, 78%, 42%);
+  --chart-5: hsl(341, 75%, 51%);
+  --sidebar: hsl(220, 25%, 12%);
+  --sidebar-foreground: hsl(210, 40%, 98%);
+  --sidebar-primary: hsl(195, 100%, 50%);
+  --sidebar-primary-foreground: hsl(220, 35%, 8%);
+  --sidebar-accent: hsl(220, 15%, 25%);
+  --sidebar-accent-foreground: hsl(195, 100%, 50%);
+  --sidebar-border: hsl(220, 25%, 20%);
+  --sidebar-ring: hsl(195, 100%, 50%);
+  --font-sans: 'Inter', sans-serif;
+  --font-mono: 'JetBrains Mono', monospace;
+  --font-display: 'Space Grotesk', sans-serif;
+  --radius: 0.75rem;
+}
+
+.dark {
+  --background: hsl(220, 35%, 8%);
+  --foreground: hsl(210, 40%, 98%);
+  --card: hsl(220, 25%, 12%);
+  --card-foreground: hsl(210, 40%, 98%);
+  --popover: hsl(220, 25%, 12%);
+  --popover-foreground: hsl(210, 40%, 98%);
+  --primary: hsl(195, 100%, 50%);
+  --primary-foreground: hsl(220, 35%, 8%);
+  --secondary: hsl(262, 65%, 65%);
+  --secondary-foreground: hsl(210, 40%, 98%);
+  --muted: hsl(220, 15%, 25%);
+  --muted-foreground: hsl(220, 10%, 70%);
+  --accent: hsl(51, 100%, 50%);
+  --accent-foreground: hsl(220, 35%, 8%);
+  --destructive: hsl(356, 90%, 54%);
+  --destructive-foreground: hsl(0, 0%, 100%);
+  --border: hsl(220, 25%, 20%);
+  --input: hsl(220, 25%, 20%);
+  --ring: hsl(195, 100%, 50%);
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground antialiased overflow-x-hidden;
+    font-family: var(--font-sans);
+    background: linear-gradient(135deg, #0B1426 0%, #1a1a2e 50%, #16213e 100%);
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    font-family: var(--font-display);
+  }
+}
+
+@layer components {
+  .glass-card {
+    @apply bg-white/5 backdrop-blur-md border border-white/10 shadow-2xl shadow-black/30;
+  }
+
+  .contact-highlight {
+    background: linear-gradient(135deg, hsl(195, 100%, 50%) 0%, hsl(262, 65%, 65%) 100%);
+    background-size: 200% 200%;
+    animation: gradient-flow 3s ease infinite;
+  }
+
+  .star {
+    position: absolute;
+    background: white;
+    border-radius: 50%;
+    animation: twinkle 3s infinite ease-in-out;
+  }
+
+  .typewriter {
+    overflow: hidden;
+    border-right: 3px solid hsl(195, 100%, 50%);
+    white-space: nowrap;
+    margin: 0 auto;
+    animation: typing 3s steps(40, end), blink-caret 0.75s step-end infinite;
+  }
+
+  .skill-card:hover {
+    transform: translateY(-10px) scale(1.05);
+    box-shadow: 0 20px 40px rgba(0, 212, 255, 0.2);
+  }
+
+  .section-reveal {
+    opacity: 0;
+    transform: translateY(50px);
+    transition: all 0.8s ease-out;
+  }
+
+  .section-reveal.revealed {
+    opacity: 1;
+    transform: translateY(0);
+  }
+
+  .nav-dot {
+    transition: all 0.3s ease;
+  }
+
+  .nav-dot.active {
+    background: hsl(195, 100%, 50%);
+    transform: scale(1.5);
+  }
+}
+
+@layer utilities {
+  .animate-float {
+    animation: float 6s ease-in-out infinite;
+  }
+
+  .animate-glow {
+    animation: glow 2s ease-in-out infinite alternate;
+  }
+
+  .animate-gradient {
+    animation: gradient-flow 3s ease infinite;
+  }
+}
+
+@keyframes twinkle {
+  0%, 100% { 
+    opacity: 0.3; 
+    transform: scale(1); 
+  }
+  50% { 
+    opacity: 1; 
+    transform: scale(1.2); 
+  }
+}
+
+@keyframes float {
+  0%, 100% { 
+    transform: translateY(0px) rotate(0deg); 
+  }
+  33% { 
+    transform: translateY(-10px) rotate(2deg); 
+  }
+  66% { 
+    transform: translateY(-5px) rotate(-1deg); 
+  }
+}
+
+@keyframes typing {
+  from { 
+    width: 0; 
+  }
+  to { 
+    width: 100%; 
+  }
+}
+
+@keyframes blink-caret {
+  from, to { 
+    border-color: transparent; 
+  }
+  50% { 
+    border-color: hsl(195, 100%, 50%); 
+  }
+}
+
+@keyframes glow {
+  from { 
+    box-shadow: 0 0 20px rgba(0, 212, 255, 0.3); 
+  }
+  to { 
+    box-shadow: 0 0 30px rgba(0, 212, 255, 0.6); 
+  }
+}
+
+@keyframes gradient-flow {
+  0% { 
+    background-position: 0% 50%; 
+  }
+  50% { 
+    background-position: 100% 50%; 
+  }
+  100% { 
+    background-position: 0% 50%; 
+  }
+}
