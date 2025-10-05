@@ -4,7 +4,6 @@
 @tailwind utilities;
 
 :root {
-  --background: hsl(220, 35%, 8%);
   --foreground: hsl(210, 40%, 98%);
   --card: hsl(220, 25%, 12%);
   --card-foreground: hsl(210, 40%, 98%);
@@ -73,6 +72,7 @@
     @apply bg-background text-foreground antialiased overflow-x-hidden;
     font-family: var(--font-sans);
     background: linear-gradient(135deg, #0B1426 0%, #1a1a2e 50%, #16213e 100%);
+    cursor: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24'><path fill='%23FFD54A' d='m12 2 2.7 6.6 7 .6-5.3 4.5 1.7 6.8L12 17l-6.1 3.5 1.7-6.8L2.3 9.2l7-.6z'/></svg>") 12 12, auto;
   }
 
   h1, h2, h3, h4, h5, h6 {

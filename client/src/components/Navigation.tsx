@@ -3,7 +3,7 @@ import { useEffect, useState } from "react";
 export default function Navigation() {
   const [activeSection, setActiveSection] = useState(0);
 
-  const sections = ['hero', 'about', 'projects', 'contact'];
+  const sections = ['hero', 'about', 'projects'];
 
   useEffect(() => {
     const handleScroll = () => {

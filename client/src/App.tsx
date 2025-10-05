@@ -3,6 +3,7 @@ import { Toaster } from "@/components/ui/toaster";
 import { TooltipProvider } from "@/components/ui/tooltip";
 import Home from "@/pages/home";
 import NotFound from "@/pages/not-found";
+import StarCursor from "@/components/StarCursor";
 
 function Router() {
   return (
@@ -16,6 +17,7 @@ function Router() {
 function App() {
   return (
     <TooltipProvider>
+      <StarCursor />
       <Toaster />
       <Router />
     </TooltipProvider>
