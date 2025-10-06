@@ -1,5 +1,10 @@
 import { motion } from "framer-motion";
 import { useState } from "react";
+import imgFeature0 from "@/assets/images/projects/feature-card-0-hover.png";
+import imgFeature1 from "@/assets/images/projects/feature-card-1-hover.png";
+import imgFeature2 from "@/assets/images/projects/feature-card-2-hover.png";
+import imgGlassCheck from "@/assets/images/projects/projects-glass-card-check.png";
+import imgCategoryTags from "@/assets/images/projects/projects-category-tags.png";
 
 export default function ProjectsSection() {
   const [showAll, setShowAll] = useState(false);
@@ -11,7 +16,7 @@ export default function ProjectsSection() {
       category: "MERN",
       categoryColor: "primary",
       hoverColor: "primary",
-      image: "/src/assets/images/projects/feature-card-0-hover.png",
+      image: imgFeature0,
       tags: ["MongoDB", "Express", "React", "Node"],
       gitLink: "https://github.com/radu985/multi-container-nginx-react-node-mongo",
       projects: [
@@ -26,7 +31,7 @@ export default function ProjectsSection() {
       category: "Next.js",
       categoryColor: "secondary",
       hoverColor: "secondary",
-      image: "/src/assets/images/projects/feature-card-1-hover.png",
+      image: imgFeature1,
       tags: ["Next.js", "TypeScript", "Edge"],
       gitLink: "https://github.com/radu985/Archive-powerfulyang.com",
       projects: [
@@ -41,9 +46,9 @@ export default function ProjectsSection() {
       category: "Python/Django",
       categoryColor: "accent",
       hoverColor: "accent",
-      image: "/src/assets/images/projects/feature-card-2-hover.png",
+      image: imgFeature2,
       tags: ["Django", "DRF", "Celery"],
-      gitLin: "https://github.com/radu985/simple-tasks",
+      gitLink: "https://github.com/radu985/auto-ReservationBot-python",
       projects: [
         { title: "Analytics API", description: "REST API with JWT & throttling.", image: "https://images.unsplash.com/photo-1515879218367-8466d910aaa4?auto=format&fit=crop&w=800&h=600", tags: ["DRF", "JWT", "Redis"], gitLink: "https://github.com/radu985/DRF-Docker-PipEnv-Nginx-Daphne-Redis-JWT-GraphQL" },
         { title: "Admin Portal", description: "Custom admin & reports.", image: "https://images.unsplash.com/photo-1517433456452-f9633a875f6f?auto=format&fit=crop&w=800&h=600", tags: ["Django", "PostgreSQL", "Charts"], gitLink: "https://github.com/radu985/music_charts_site" }
@@ -55,7 +60,7 @@ export default function ProjectsSection() {
       category: "Mobile",
       categoryColor: "secondary",
       hoverColor: "secondary",
-      image: "/src/assets/images/projects/projects-glass-card-check.png",
+      image: imgGlassCheck,
       tags: ["Flutter", "Dart", "Firebase"],
       gitLink: "https://github.com/radu985/Taskist",
       projects: [
@@ -70,7 +75,7 @@ export default function ProjectsSection() {
       category: "WP/Laravel",
       categoryColor: "primary",
       hoverColor: "primary",
-      image: "/src/assets/images/projects/projects-category-tags.png",
+      image: imgCategoryTags,
       tags: ["WordPress", "MySQL"],
       gitLink: "https://github.com/radu985/wp-eloquent",
       projects: [
